@@ -21,15 +21,16 @@ div.border-gold.bg-malt.border-4
       data-autopickr-slen-value="1"
       class=blueBox
       ]
+      / just calling a helper blueBox to set tailwind classes for a simple button
       div
         = text_field_tag(:input,nil,
           data:{autopickr_target:"input", action:"autopickr#search" },
           placeholder:"Search...",class:"w-48 px-1 my-2",autofocus:true)
-        / span = link_to('Pick',nil,data:{autopickr_target:"button"}, class:"bg-blue-500 hover:bg-blue-700 text-white font-bold mx-2 py px-2 rounded inline-block hidden")
-
+        / span = link_to('Pick',nil,data:{autopickr_target:"button"}, 
+        / class:"bg-blue-500 hover:bg-blue-700 text-white font-bold mx-2 py px-2 rounded inline-block hidden")
       div = hidden_field_tag('selected_id',nil,
         data:{autopickr_target:"hidden",action:"change->autopickr#selected"})
-      ul.text-black.bg-gray-100.max-h-52.divide-y.divide-fuchsia-300.overflow-scroll[data-autopickr-target="results"] 
+      ul.text-black.bg-gray-100.max-h-72.divide-y.divide-fuchsia-300.overflow-scroll[data-autopickr-target="results"] 
   div
     strong Flatpicker Demo 
     i Just enter text field and pick a date

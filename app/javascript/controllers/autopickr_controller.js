@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["input",'results','hidden','selected','button',"options"]
+  static targets = ["input",'results','hidden','selected','button']
   static values = { url: String ,slen: Number}
 
   connect() {

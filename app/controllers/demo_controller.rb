@@ -4,7 +4,6 @@ class DemoController < ApplicationController
 
   def display
     set_db
-    # render plain: "You picked-> #{@db[params[:id].to_i]}"
   end
 
   def search
