@@ -79,7 +79,7 @@ end
 
 The autopickr template/markup that is contained in the show template
 
-```ruby-slim
+```slim
 div[
   data-autopickr-url-value="/demo/search" 
   data-controller="autopickr"
