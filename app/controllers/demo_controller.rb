@@ -5,7 +5,7 @@ class DemoController < ApplicationController
   def display
     set_db
   end
-
+  
   def search
     set_db
     @search_results = []

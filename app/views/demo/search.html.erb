@@ -1,4 +1,4 @@
 <% @search_results.each.with_index do |result| %>
-  <li class="hover:bg-blue-100 p-1" role='option' data-action="click->autopickr#select" data-select-id="<%= result[1] %>"
-    data-select="/demo/display?id=<%= result[1] %>" > <%= result[0] %></li>
+  <li class="hover:bg-blue-100 p-1"  data-action="click->autopickr#select" 
+    data-select-url="/demo/display?id=<%= result[1] %>" > <%= result[0] %></li>
 <% end %>

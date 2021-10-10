@@ -1,0 +1,10 @@
+div.border-gold.bg-malt.border-4
+  h3.p-2.text-white.text-lg
+    strong Demo#Display on edit button
+  span.mx-2.text-gold Find me in app/views/demo/display.html.slim
+  span = link_to('Reload Show Page',demo_show_path, class:"bg-green-500 hover:bg-green-700 text-white font-bold mx-2 py px-2 rounded inline-block")
+
+div.p-2.m-2
+  p = "You picked-> #{@db[params[:id].to_i]}"
+  p Whatcha going to do now?
+  P some buttons for options

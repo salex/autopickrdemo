@@ -8,8 +8,10 @@
     "esbuild": "^0.13.3",
     "flatpickr": "^4.6.9",
     "postcss": "^8.3.8",
+    "stimulus-autocomplete": "^3.0.0-rc.1",
     "stimulus-flatpickr": "3.0.0-0",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^2.2.16",
+    "tailwindcss-stimulus-components": "^3.0.0"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds",

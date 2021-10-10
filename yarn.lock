@@ -23,6 +23,11 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@hotwired/stimulus@>=3.0.0":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.0.1.tgz#141f15645acaa3b133b7c247cad58ae252ffae85"
+  integrity sha512-oHsJhgY2cip+K2ED7vKUNd2P+BEswVhrCYcJ802DSsblJFv7mPFVk3cQKvm2vHgHeDVdnj7oOKrBbzp1u8D+KA==
+
 "@hotwired/stimulus@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.0.0.tgz#45171e61417af60f0e546665c52fae5b67295cee"
@@ -962,6 +967,11 @@ source-map-js@^0.6.2:
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-0.6.2.tgz#0bb5de631b41cfbda6cfba8bd05a80efdfd2385e"
   integrity sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==
 
+stimulus-autocomplete@^3.0.0-rc.1:
+  version "3.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/stimulus-autocomplete/-/stimulus-autocomplete-3.0.0-rc.1.tgz#8d5a38f7e10bf3aab6e5dfa24fe1f0d2a8d97143"
+  integrity sha512-3WDcQ/I0NQQyH4aDMHoaLgIOP0DimrUgs8j3FG/30O3wXlafNB8AL7WBh0a4BEB8L8qFFAtP4x2KmYQunXvwgw==
+
 stimulus-flatpickr@3.0.0-0:
   version "3.0.0-0"
   resolved "https://registry.yarnpkg.com/stimulus-flatpickr/-/stimulus-flatpickr-3.0.0-0.tgz#af9bfa70bd1b74654312580101387c9d13ee32f2"
@@ -982,6 +992,13 @@ supports-color@^7.1.0:
   integrity sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
   dependencies:
     has-flag "^4.0.0"
+
+tailwindcss-stimulus-components@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-stimulus-components/-/tailwindcss-stimulus-components-3.0.0.tgz#3bbe3a4cd10003536a85054c318c929059df86ef"
+  integrity sha512-nCqKev2l7i91wbI7/kBB2GSE+QUcqFK9SrLSVxFdoMzPdb+lcqjAkuun/bSAgMAHKn4CbAtPiK72Ajne2Puu9g==
+  dependencies:
+    "@hotwired/stimulus" ">=3.0.0"
 
 tailwindcss@^2.2.16:
   version "2.2.16"

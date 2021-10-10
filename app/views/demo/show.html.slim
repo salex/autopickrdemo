@@ -1,8 +1,3 @@
-/ <h1 class="bg-malt text-white text-lg p-4">Demo#show</h1>
-/ <p>Find me in app/views/demo/show.html.erb</p>
-
-/ div[data-controller="hello"]
-/ p.bg-green-200= text_field_tag "date",nil,data:{controller:'flatpickr'}, placeholder:"Enter a Date",class:"border-2 border-gray-500", style:'border: solid black 1px;'
 
 div.border-gold.bg-malt.border-4
   h3.p-2.text-white.text-lg
@@ -10,37 +5,41 @@ div.border-gold.bg-malt.border-4
   span.mx-2.text-gold Find me in app/views/demo/show.html.slim
   span = link_to('Reload Show Page',demo_show_path, class:"bg-green-500 hover:bg-green-700 text-white font-bold mx-2 py px-2 rounded inline-block")
 
-.grid.grid-cols-3.gap-4.mx-4
-  div
-    strong AutoPickr Demo 
-    i Just enter a name to search field
+.grid.grid-cols-2.gap-4.mx-4
+  div 
+    strong AutoPickr demo with inline
+    / inline demo
+    = render partial:'pickr'
 
-    div[
-      data-autopickr-url-value="/demo/search" 
-      data-controller="autopickr"
-      data-autopickr-slen-value="1"
-      class=blueBox
-      ]
-      / just calling a helper blueBox to set tailwind classes for a simple button
-      div
-        = text_field_tag(:input,nil,
-          data:{autopickr_target:"input", action:"autopickr#search" },
-          placeholder:"Search...",class:"w-48 px-1 my-2",autofocus:true)
-        / span = link_to('Pick',nil,data:{autopickr_target:"button"}, 
-        / class:"bg-blue-500 hover:bg-blue-700 text-white font-bold mx-2 py px-2 rounded inline-block hidden")
-      div = hidden_field_tag('selected_id',nil,
-        data:{autopickr_target:"hidden",action:"change->autopickr#selected"})
-      ul.text-black.bg-gray-100.max-h-72.divide-y.divide-fuchsia-300.overflow-scroll[data-autopickr-target="results"] 
   div
     strong Flatpicker Demo 
     i Just enter text field and pick a date
 
     p[class=greenBox]= text_field_tag "date",nil,data:{controller:'flatpickr'}, placeholder:"Enter a Date",class:" px-1 my-2"
 
-  div Side Bar
 
-span Where is my icon? 
-span.text-gold.text-2xl = icon('fas fa-edit','Edit Player')
-p 
-  button.bg-gold.p-2.m-2.rounded-md.opacity-80 I be a button
+.grid.grid-cols-2.gap-4.mx-4
 
+  div 
+    strong AutoPickr demo tailswind-stimulus-components Modal
+    / Modal demo
+    div
+      div.m-3 data-controller="modal" data-modal-allow-background-close="false" 
+        a.bg-blue-500.hover:bg-blue-700.text-white.font-bold.py-3.px-6.rounded data-action="click->modal#open" href="#" 
+          span Search Thing by name
+        /! Modal Container
+        .hidden.animated.fadeIn.fixed.inset-0.overflow-y-auto.flex.items-center.justify-center data-action=("click->modal#closeBackground keyup@window->modal#closeWithKeyboard") data-modal-target="container" style=("z-index: 9999;") 
+          /! Modal Inner Container
+          .max-h-screen.w-full.max-w-lg.relative
+            /! Modal Card
+            .m-1.bg-white.rounded.shadow
+              .p-8
+                / h2.text-xl.mb-4 Large Modal Content
+                / p.mb-4 This is an example modal dialog box.
+                = render partial:"pickr"
+                .flex.justify-end.items-center.flex-wrap.mt-6
+                  button.bg-blue-500.hover:bg-blue-700.text-white.font-bold.py-2.px-4.rounded data-action="click->modal#close"  Close
+
+
+  div 
+    strong instructions

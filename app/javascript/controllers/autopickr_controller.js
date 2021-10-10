@@ -6,6 +6,9 @@ export default class extends Controller {
 
   connect() {
     console.log("Hi autopickr")
+    console.log(`URL > ${this.urlValue}`)
+    console.log(`slen > ${this.slenValue}`)
+
     let slen  // slen is the number of charcters entered before we search/query
     if (this.hasSlenValue) {
       this.slen = this.slenValue
@@ -19,9 +22,12 @@ export default class extends Controller {
     const selected = event.target
     if (this.hasButtonTarget) {  // if there is a button target, display instead of following url
       this.buttonTarget.classList.remove('hidden')
-      this.buttonTarget['href'] = selected.dataset.select
+      console.log(`selected value ${selected.innerHTML}`)
+      this.inputTarget.value = selected.innerHTML
+      console.log(`selected URL ${selected.dataset.selectUrl}`)
+      this.buttonTarget['href'] = selected.dataset.selectUrl
     }else{
-      location.assign(selected.dataset.select)
+      location.assign(selected.dataset.selectUrl)
     }
   }
 

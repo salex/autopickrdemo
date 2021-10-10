@@ -12,6 +12,8 @@ application.register('flatpickr', Flatpickr)
 import AutopickrController from "./autopickr_controller"
 application.register("autopickr", AutopickrController)
 
+import { Modal } from "tailwindcss-stimulus-components"
+application.register('modal', Modal)
 
 import "flatpickr/dist/flatpickr.css";
 import "flatpickr/dist/themes/light.css";
